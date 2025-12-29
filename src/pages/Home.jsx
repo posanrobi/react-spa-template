@@ -1,4 +1,3 @@
-import CallToAction from "../components/CallToAction";
 import CardCarousel from "../components/CardCarousel ";
 import Hero from "../components/Hero";
 import ValueProps from "../components/ValueProps";

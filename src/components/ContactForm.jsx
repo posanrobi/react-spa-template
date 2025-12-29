@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const ContactForm = () => {
     /*  const [formData, setFormData] = useState({
@@ -9,35 +10,52 @@ const ContactForm = () => {
     }); */
     const [status, setStatus] = useState(null);
     const [sending, setSending] = useState(false);
+    const { executeRecaptcha } = useGoogleReCaptcha();
 
     /* const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
     }; */
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
+
+        //  Honeypot
+        if (e.target.company.value) {
+            return;
+        }
+
+        if (!executeRecaptcha) {
+            setStatus("error");
+            return;
+        }
+
         setSending(true);
         setStatus(null);
 
-        // email küldés - EmailJS → Brevo → weboldal tulajnak email
-        emailjs
-            .sendForm(
+        try {
+            const token = await executeRecaptcha("contact_form");
+
+            if (!token) {
+                throw new Error("No recaptcha token");
+            }
+
+            //  Email küldés
+            await emailjs.sendForm(
                 "service_uo0q7ea", // ← EmailJS Brevo service ID
                 "template_21fh0km", // ← Template ID
                 e.target,
                 "xLBQ-h8JSapL6Fa6y" // ← EmailJS User ID (nyilvános!)
-            )
-            .then(() => {
-                setStatus("success");
-                e.target.reset();
-            })
-            .catch(() => {
-                setStatus("error");
-            })
-            .finally(() => {
-                setSending(false);
-            });
+            );
+
+            setStatus("success");
+            e.target.reset();
+        } catch (err) {
+            setStatus("error");
+            console.error(err);
+        } finally {
+            setSending(false);
+        }
     };
 
     useEffect(() => {
@@ -53,6 +71,14 @@ const ContactForm = () => {
     return (
         <>
             <form onSubmit={handleSubmit} className="contact-form">
+                {/* honeypot field */}
+                <input
+                    type="text"
+                    name="company"
+                    tabIndex="-1"
+                    autoComplete="off"
+                    style={{ display: "none" }}
+                />
                 <input
                     type="text"
                     name="name"
