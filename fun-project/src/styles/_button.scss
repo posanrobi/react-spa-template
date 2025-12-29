@@ -1,0 +1,68 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+
+    transition: all 0.25s ease;
+
+    /* ikonok mérete */
+    svg {
+        transform: scale(1.2);
+    }
+
+    /* ===== VARIANTS ===== */
+
+    &--primary {
+        background: #062f3d;
+        color: #fff;
+
+        &:hover {
+            background: #0a4a60;
+        }
+    }
+
+    &--outline {
+        background: transparent;
+        border: 2px solid #062f3d;
+        color: #062f3d;
+
+        &:hover {
+            background: #062f3d;
+            color: #fff;
+        }
+    }
+
+    &--ghost {
+        background: transparent;
+        color: #062f3d;
+
+        &:hover {
+            background: rgba(6, 47, 61, 0.08);
+        }
+    }
+
+    /* ===== SIZES ===== */
+
+    &--sm {
+        font-size: 0.875rem;
+        padding: 0.4rem 1rem;
+    }
+
+    &--md {
+        font-size: 1rem;
+    }
+
+    &--lg {
+        font-size: 1.125rem;
+        padding: 0.8rem 1.8rem;
+    }
+}

@@ -1,0 +1,40 @@
+.notfound-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+
+    &__title {
+        font-size: 10rem;
+        font-weight: 900;
+        color: #062f3d;
+        margin: 0;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        color: #062f3d;
+        margin: 1rem 0;
+    }
+
+    &__text {
+        font-size: 1rem;
+        color: #fff;
+        background: transparent;
+        margin-top: 5rem;
+    }
+
+    &__link {
+        background: transparent;
+        border: 2px solid #062f3d;
+        color: #062f3d;
+        padding: 0.6rem 1.2rem;
+        border-radius: 999px;
+        cursor: pointer;
+
+        &:hover {
+            color: rgb(81, 102, 97);
+        }
+    }
+}

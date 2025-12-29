@@ -1,0 +1,26 @@
+.cta {
+    margin-top: 3rem;
+    padding: 2rem 1rem 5rem 1rem;
+    text-align: center;
+    background: rgb(99, 107, 105);
+    color: #fff;
+    border-radius: 12px 12px 0 0;
+
+    &__button {
+        margin-top: 2rem;
+        padding: 1rem 2.5rem;
+        border-radius: 999px;
+        background: #fff;
+        color: #062f3d;
+        font-weight: bold;
+    }
+}
+
+.home-cta {
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    border-radius: 999px;
+    color: #fff;
+    background: rgb(99, 107, 105);
+    font-weight: bold;
+}

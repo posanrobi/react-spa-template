@@ -1,0 +1,37 @@
+.footer {
+    padding: 3rem 1rem 1rem 1rem;
+    background-color: #fff;
+    color: #111111;
+    text-align: center;
+
+    hr {
+        width: 80%;
+    }
+
+    a {
+        color: #062f3d;
+        text-decoration: none;
+        &:hover {
+            border-color: #062f3d85;
+            color: #062f3d85;
+        }
+    }
+
+    &__info {
+        margin: 1.5rem 0;
+        p {
+            margin: 0.5rem 0;
+        }
+        .social {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 0;
+        }
+    }
+
+    &__copyright {
+        font-size: 0.85rem;
+        color: #111111;
+    }
+}

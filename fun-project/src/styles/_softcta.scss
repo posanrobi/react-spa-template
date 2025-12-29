@@ -1,0 +1,34 @@
+.soft-cta {
+    padding: 3rem 1rem;
+    background-color: #f9fafb;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    gap: 1rem;
+
+    p {
+        margin-left: 2rem;
+        color: #555;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border: 2px solid #062f3d;
+        color: #062f3d;
+        padding: 0.6rem 1.2rem;
+        border-radius: 999px;
+        cursor: pointer;
+        transition: border-color 0.25s;
+
+        &:visited {
+            color: #062f3d;
+        }
+
+        &:hover {
+            border-color: #062f3d85;
+        }
+    }
+}

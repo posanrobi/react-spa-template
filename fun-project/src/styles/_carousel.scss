@@ -1,0 +1,68 @@
+.card-carousel {
+    margin-top: 4rem;
+    padding: 4rem 1rem;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #fff;
+        transition: color 0.2s ease;
+    }
+
+    &__card {
+        position: relative;
+        height: 480px;
+        border-radius: 16px;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.1)
+        );
+        color: #fff;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        transition: background 0.3s ease;
+    }
+
+    &__card:hover {
+        transform: translateY(-6px);
+    }
+
+    &__card:hover &__overlay {
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.25)
+        );
+    }
+
+    &__title {
+        margin: 1rem 0;
+        text-align: left;
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+
+    &__swiper {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+        &.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

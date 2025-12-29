@@ -1,0 +1,36 @@
+.scroll-to-top {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgb(99, 107, 105);
+    color: #fff;
+
+    box-shadow: none;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    &:hover {
+        background: #062f3d85;
+        border: none;
+    }
+
+    svg {
+        transform: scale(2.2);
+    }
+}

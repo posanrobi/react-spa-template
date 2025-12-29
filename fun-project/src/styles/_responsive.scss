@@ -1,0 +1,200 @@
+// Mobile
+@media (max-width: 639px) {
+    .page-content {
+        padding: 0 5rem;
+    }
+
+    .navbar {
+        padding: 0.5rem 1rem;
+        font-size: 2rem;
+
+        .navbar__links {
+            position: absolute;
+            position: fixed;
+            inset: 50px 0 0 0;
+
+            flex-direction: column;
+            justify-content: flex-start;
+
+            background: white;
+            padding: 1.5rem 0rem;
+            width: 100%;
+            font-size: 1rem;
+            z-index: 1000;
+
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease-in-out;
+
+            li {
+                text-align: left;
+                a {
+                    padding-left: 3rem;
+                    letter-spacing: 0.2rem;
+                    text-transform: uppercase;
+                }
+            }
+
+            &.open {
+                max-height: 100vh;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .navbar__toggle {
+            padding: 0;
+            position: relative;
+            z-index: 1001;
+
+            display: block;
+            margin-left: auto;
+            background: none;
+            border: none;
+            &:hover,
+            &:focus,
+            &:focus-visible {
+                outline: none;
+            }
+
+            svg {
+                color: #062f3d;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .slider .hero-slide__overlay h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .intro-text {
+        margin-top: 3rem;
+
+        &__title {
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+    }
+
+    .value-props {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+
+    .soft-cta {
+        flex-direction: column;
+        &__button {
+            margin: 0 4rem;
+        }
+    }
+
+    .card-carousel {
+        margin-top: 1rem;
+
+        &__title {
+            font-size: 2rem;
+        }
+    }
+
+    .about-section {
+        margin-top: 1rem;
+        scroll-margin-top: 3rem;
+        &__title {
+            font-size: 2rem;
+        }
+        .about-section-box {
+            .about-text-container {
+                text-align: left;
+            }
+        }
+    }
+
+    .services {
+        &__title {
+            font-size: 2rem;
+        }
+
+        .service {
+            .service__icon {
+                font-size: 3rem;
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+
+    .contact {
+        margin: 4rem 0 0 0;
+        padding: 0rem 1rem 1rem 1rem;
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .scroll-to-top {
+        padding: 0.9rem;
+        width: 40px;
+        height: 40px;
+        svg {
+            transform: scale(3);
+        }
+    }
+}
+
+// Tablet
+@media (min-width: 640px) and (max-width: 1023px) {
+    .navbar {
+        &__links {
+            font-size: 1.4rem;
+        }
+    }
+
+    .slider {
+        .hero-slide__overlay {
+            h2 {
+                font-size: 4rem;
+            }
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .value-props {
+        &__grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+
+    .soft-cta {
+        flex-direction: column;
+        &__button {
+            margin: 0 14rem;
+        }
+    }
+
+    .contact {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .contact-form {
+        width: 70%;
+    }
+
+    .scroll-to-top {
+        width: 60px;
+        height: 60px;
+        svg {
+            transform: scale(3);
+        }
+    }
+}

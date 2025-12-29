@@ -1,0 +1,30 @@
+.intro-text {
+    margin-top: 7rem;
+    text-align: center;
+    width: 100%;
+
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+    }
+
+    &__description {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    &.loaded {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &.dark-bg {
+        background-color: rgb(99, 107, 105);
+    }
+}
