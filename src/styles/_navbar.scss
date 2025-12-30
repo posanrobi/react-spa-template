@@ -17,7 +17,7 @@
     transition: background 0.3s ease, box-shadow 0.3s ease;
 
     &.scrolled {
-        background: rgb(99, 107, 105);
+        background: c.$color_lt;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
 
@@ -42,11 +42,11 @@
         }
 
         li a {
-            color: #1f2937;
+            color: c.$link_color_lt;
             text-decoration: none;
 
             &:hover {
-                color: c.$basic_hover_color;
+                color: c.$hover_color_lt;
             }
         }
     }

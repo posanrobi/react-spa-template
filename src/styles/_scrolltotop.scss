@@ -1,3 +1,5 @@
+@use "./colors" as c;
+
 .scroll-to-top {
     position: fixed;
     right: 1.5rem;
@@ -5,7 +7,7 @@
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: rgb(99, 107, 105);
+    background: c.$color_lt;
     color: #fff;
 
     box-shadow: none;
@@ -26,7 +28,7 @@
     }
 
     &:hover {
-        background: #062f3d85;
+        background: c.$btn_text_color_hover_lt;
         border: none;
     }
 

@@ -1,8 +1,10 @@
+@use "./colors" as c;
+
 .cta {
     margin-top: 3rem;
     padding: 2rem 1rem 5rem 1rem;
     text-align: center;
-    background: rgb(99, 107, 105);
+    background: c.$color_lt;
     color: #fff;
     border-radius: 12px 12px 0 0;
 
@@ -11,7 +13,7 @@
         padding: 1rem 2.5rem;
         border-radius: 999px;
         background: #fff;
-        color: #062f3d;
+        color: c.$btn_text_color_lt;
         font-weight: bold;
     }
 }
@@ -21,6 +23,6 @@
     padding: 1rem 2.5rem;
     border-radius: 999px;
     color: #fff;
-    background: rgb(99, 107, 105);
+    background: c.$color_lt;
     font-weight: bold;
 }

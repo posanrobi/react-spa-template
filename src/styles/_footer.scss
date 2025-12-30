@@ -1,7 +1,9 @@
+@use "./colors" as c;
+
 .footer {
     padding: 3rem 1rem 1rem 1rem;
     background-color: #fff;
-    color: #111111;
+    color: c.$text_color_lt;
     text-align: center;
 
     hr {
@@ -9,11 +11,11 @@
     }
 
     a {
-        color: #062f3d;
+        color: c.$btn_text_color_lt;
         text-decoration: none;
         &:hover {
-            border-color: #062f3d85;
-            color: #062f3d85;
+            border-color: c.$btn_text_color_hover_lt;
+            color: c.$btn_text_color_hover_lt;
         }
     }
 
@@ -32,6 +34,6 @@
 
     &__copyright {
         font-size: 0.85rem;
-        color: #111111;
+        color: c.$text_color_lt;
     }
 }

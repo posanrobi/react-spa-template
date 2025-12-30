@@ -1,3 +1,5 @@
+@use "./colors" as c;
+
 .notfound-container {
     display: flex;
     justify-content: center;
@@ -8,13 +10,13 @@
     &__title {
         font-size: 10rem;
         font-weight: 900;
-        color: #062f3d;
+        color: c.$btn_text_color_lt;
         margin: 0;
     }
 
     &__description {
         font-size: 1.8rem;
-        color: #062f3d;
+        color: c.$btn_text_color_lt;
         margin: 1rem 0;
     }
 
@@ -27,8 +29,8 @@
 
     &__link {
         background: transparent;
-        border: 2px solid #062f3d;
-        color: #062f3d;
+        border: 2px solid c.$btn_text_color_lt;
+        color: c.$btn_text_color_lt;
         padding: 0.6rem 1.2rem;
         border-radius: 999px;
         cursor: pointer;

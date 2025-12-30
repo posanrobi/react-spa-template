@@ -1,3 +1,5 @@
+@use "./colors" as c;
+
 .services {
     display: flex;
     flex-direction: column;
@@ -50,7 +52,7 @@
         width: 4rem;
         height: 4rem;
 
-        background-color: rgb(99, 107, 105);
+        background-color: c.$color_lt;
         padding: 1rem;
         border-radius: 50%;
     }

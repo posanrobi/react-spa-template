@@ -1,3 +1,5 @@
+@use "./colors" as c;
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -22,7 +24,7 @@
     /* ===== VARIANTS ===== */
 
     &--primary {
-        background: #062f3d;
+        background: c.$btn_text_color_lt;
         color: #fff;
 
         &:hover {
@@ -32,18 +34,18 @@
 
     &--outline {
         background: transparent;
-        border: 2px solid #062f3d;
-        color: #062f3d;
+        border: 2px solid c.$btn_text_color_lt;
+        color: c.$btn_text_color_lt;
 
         &:hover {
-            background: #062f3d;
+            background: c.$btn_text_color_lt;
             color: #fff;
         }
     }
 
     &--ghost {
         background: transparent;
-        color: #062f3d;
+        color: c.$btn_text_color_lt;
 
         &:hover {
             background: rgba(6, 47, 61, 0.08);

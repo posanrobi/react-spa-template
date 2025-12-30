@@ -1,3 +1,5 @@
+@use "./colors" as c;
+
 .soft-cta {
     padding: 3rem 1rem;
     background-color: #f9fafb;
@@ -16,19 +18,19 @@
         justify-content: center;
         align-items: center;
         background: transparent;
-        border: 2px solid #062f3d;
-        color: #062f3d;
+        border: 2px solid c.$btn_text_color_lt;
+        color: c.$btn_text_color_lt;
         padding: 0.6rem 1.2rem;
         border-radius: 999px;
         cursor: pointer;
         transition: border-color 0.25s;
 
         &:visited {
-            color: #062f3d;
+            color: c.$btn_text_color_lt;
         }
 
         &:hover {
-            border-color: #062f3d85;
+            border-color: c.$btn_text_color_hover_lt;
         }
     }
 }

@@ -1,3 +1,5 @@
+@use "./colors" as c;
+
 .intro-text {
     margin-top: 7rem;
     text-align: center;
@@ -25,6 +27,6 @@
     }
 
     &.dark-bg {
-        background-color: rgb(99, 107, 105);
+        background-color: c.$color_lt;
     }
 }

@@ -1,5 +1,7 @@
+@use "./colors" as c;
+
 .page-header {
-    background: rgb(99, 107, 105);
+    background: c.$color_lt;
     width: 100%;
     .page-header-title {
         text-align: left;

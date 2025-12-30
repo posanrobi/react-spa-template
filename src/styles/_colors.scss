@@ -1,2 +1,15 @@
-//basic
-$basic_hover_color: #949ba6;
+//----light-theme---- $lt
+$color_lt: rgb(99, 107, 105);
+$hover_color_lt: #949ba6;
+$background_color_lt: #fff;
+$text_color_lt: #111111;
+$link_color_lt: #1f2937;
+$overlay_color_lt: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.1)
+);
+$btn_text_color_lt: #062f3d;
+$btn_text_color_hover_lt: #062f3d85;
+
+//----dark-theme---- $dt
