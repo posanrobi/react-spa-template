@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
+import LazyBackground from "./LazyBackground";
 
 const CardCarousel = ({ cards = [], title }) => {
     const [loaded, setLoaded] = useState(false);
@@ -40,18 +41,15 @@ const CardCarousel = ({ cards = [], title }) => {
             >
                 {cards.map((card, i) => (
                     <SwiperSlide key={i}>
-                        <div
+                        <LazyBackground
                             className="card-carousel__card"
-                            style={{ backgroundImage: `url(${card.image})` }}
-                            role="button"
-                            tabIndex={0}
-                            aria-label={card.title}
+                            image={card.image}
                         >
                             <div className="card-carousel__overlay">
                                 <h3>{card.title}</h3>
                                 <p>{card.text}</p>
                             </div>
-                        </div>
+                        </LazyBackground>
                     </SwiperSlide>
                 ))}
             </Swiper>

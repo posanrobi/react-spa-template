@@ -7,7 +7,7 @@ const About = ({ title }) => {
             {title && <h3 className="about-section__title">{title}</h3>}
             <div className="about-section-box">
                 <div className="about-image-container left-image-container">
-                    <img src={teamImg} alt="The team" />
+                    <img src={teamImg} alt="The team" loading="lazy" />
                 </div>
                 <div className="about-text-container">
                     <h3>Szeretnénk kényelmesebbé tenni a világot</h3>
@@ -32,7 +32,7 @@ const About = ({ title }) => {
                     </p>
                 </div>
                 <div className="about-image-container right-image-container">
-                    <img src={groupImg} alt="Our story" />
+                    <img src={groupImg} alt="Our story" loading="lazy" />
                 </div>
             </div>
         </section>
