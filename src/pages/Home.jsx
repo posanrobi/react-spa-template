@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import img1 from "../assets/images/slider1.jpg";
 import img2 from "../assets/images/slider2.jpg";
 import img3 from "../assets/images/slider3.jpg";
+import { Helmet } from "react-helmet-async";
 
 const Hero = lazy(() => import("../components/Hero"));
 const IntroText = lazy(() => import("../components/IntroText"));
@@ -15,6 +16,32 @@ const Contact = lazy(() => import("../components/Contact"));
 const Home = () => {
     return (
         <>
+            <Helmet>
+                <title>Peakjobs</title>
+                <meta
+                    name="description"
+                    content="Tanácsadás felsőfokon, modern webes megoldások."
+                />
+                <meta property="og:title" content="Peakjobs" />
+                <meta
+                    property="og:description"
+                    content="Tanácsadás felsőfokon, modern webes megoldások."
+                />
+                <meta
+                    property="og:image"
+                    content="https://peakjobshungary.netlify.app/og/og.jpg"
+                />
+                <meta
+                    property="og:url"
+                    content="https://peakjobshungary.netlify.app/"
+                />
+                <meta property="og:type" content="website" />
+
+                <link
+                    rel="canonical"
+                    href="https://peakjobshungary.netlify.app/"
+                />
+            </Helmet>
             <Suspense fallback={<div>Betöltés...</div>}>
                 <Hero />
                 <div className="page-content">
