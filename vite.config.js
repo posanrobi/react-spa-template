@@ -7,7 +7,7 @@ export default defineConfig({
     plugins: [
         react(),
         sitemap({
-            hostname: "https://react-spa-template.netlify.app",
+            hostname: "https://peakjobshungary.netlify.app/",
             routes: ["/"],
         }),
     ],
