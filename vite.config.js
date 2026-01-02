@@ -8,7 +8,7 @@ export default defineConfig({
         react(),
         sitemap({
             hostname: "https://peakjobshungary.netlify.app/",
-            routes: ["/"],
+            routes: ["/", "/privacypolicy", "/impressum"],
         }),
     ],
 });
