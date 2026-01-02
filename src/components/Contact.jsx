@@ -7,7 +7,7 @@ const Contact = () => {
             <h2>Készen állsz az indulásra?</h2>
             <p>Vedd fel velünk a kapcsolatot és kezdjük el még ma.</p>
             <GoogleReCaptchaProvider reCaptchaKey="6LdIYTosAAAAAPOqDB66vJ9WnPLy_a_lt8YgCuzm">
-                <ContactForm />
+                {/*  <ContactForm /> */}
             </GoogleReCaptchaProvider>
         </section>
     );
