@@ -47,7 +47,7 @@ const Home = () => {
                 <div className="page-content">
                     <IntroText
                         title="Tanácsadás felsőfokon"
-                        description="Segítünk megtalálni a legjobb megoldásokat vállalkozásod számára. Tapasztalt csapatunk támogatást nyújt minden lépésben, 
+                        description="NE adj meg személyes adatokat, mert egy teszt oldal! Tapasztalt csapatunk támogatást nyújt minden lépésben, 
                     hogy a döntéseid gyorsak, hatékonyak és megalapozottak legyenek."
                     />
                     <ValueProps />

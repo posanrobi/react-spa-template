@@ -10,17 +10,17 @@ import { useEffect, useState } from "react";
 const slides = [
     {
         image: hero_slider,
-        title: "Modern megoldások",
+        title: "TESZT OLDAL",
         text: "Digitális termékek, valódi érték",
     },
     {
         image: hero_slider,
-        title: "Gyors és hatékony",
+        title: "TESZT OLDAL",
         text: "Skálázható webes megoldások vállalkozásoknak",
     },
     {
         image: hero_slider,
-        title: "Építs velünk",
+        title: "TESZT OLDAL",
         text: "Ötlettől a kész termékig végigkísérünk",
     },
 ];
