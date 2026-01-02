@@ -3,8 +3,8 @@ import img1 from "../assets/images/slider1.jpg";
 import img2 from "../assets/images/slider2.jpg";
 import img3 from "../assets/images/slider3.jpg";
 import { Helmet } from "react-helmet-async";
+import Hero from "../components/Hero";
 
-const Hero = lazy(() => import("../components/Hero"));
 const IntroText = lazy(() => import("../components/IntroText"));
 const ValueProps = lazy(() => import("../components/ValueProps"));
 const SoftCTA = lazy(() => import("../components/SoftCTA"));
@@ -42,7 +42,7 @@ const Home = () => {
                     href="https://peakjobshungary.netlify.app/"
                 />
             </Helmet>
-            <Suspense fallback={<div>Betöltés...</div>}>
+            <Suspense fallback={<div style={{ minHeight: "100vh" }} />}>
                 <Hero />
                 <div className="page-content">
                     <IntroText
