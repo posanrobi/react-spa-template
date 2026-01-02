@@ -8,6 +8,8 @@ import Home from "./pages/Home.jsx";
 import "./styles/main.scss";
 import NotFound from "./pages/NotFound.jsx";
 import { HelmetProvider } from "react-helmet-async";
+import Impressum from "./components/Impressum.jsx";
+import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
 
 createRoot(document.getElementById("root")).render(
     <StrictMode>
@@ -17,6 +19,11 @@ createRoot(document.getElementById("root")).render(
                     <Routes>
                         <Route path="/" element={<App />}>
                             <Route index element={<Home />} />
+                            <Route
+                                path="/privacypolicy"
+                                element={<PrivacyPolicy />}
+                            />
+                            <Route path="/impressum" element={<Impressum />} />
                         </Route>
                         <Route path="*" element={<NotFound />} />
                     </Routes>

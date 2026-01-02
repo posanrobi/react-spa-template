@@ -5,10 +5,10 @@ const Footer = () => {
         <footer className="footer">
             <hr></hr>
             <div className="footer__info">
-                <p className="address">4024, Bindzsisztán, Piac utca 12.</p>
-                <p className="phone">+36 30 123 1212</p>
+                <p className="address">Test, Bindzsisztán, Piac utca 12.</p>
+                <p className="phone"></p>
                 <p className="email">
-                    <a href="mailto:test@gmail.com">test@gmail.com</a>
+                    <a href="mailto:test@gmail.com">kalal2000pal@gmail.com</a>
                 </p>
                 <p className="social">
                     <a href="#">
@@ -18,6 +18,11 @@ const Footer = () => {
                         <FaInstagram />
                     </a>
                 </p>
+            </div>
+            <div>
+                <a href="/privacypolicy">Adatkezelési tájékoztató</a>
+                {" | "}
+                <a href="/impressum">Impresszum</a>
             </div>
             <p className="footer__copyright">
                 © {new Date().getFullYear()} Minden jog fenntartva.
